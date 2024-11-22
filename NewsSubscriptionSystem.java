@@ -19,20 +19,24 @@ public class NewsSubscriptionSystem {
         subscriberList.add(prado);
 
         NewsAgency newsAgency = new NewsAgency();
-        newsAgency.setLatestNews("Tesla has officially landed in Taguig Philippines!");
         newsAgency.setSubscriberList(subscriberList);
 
+        newsAgency.setLatestNews("Tesla has officially landed in Taguig Philippines");
         System.out.println("Breaking News!");
         System.out.println(newsAgency.notifySubscribers());
 
-        newsAgency.unSubscribe(angelo);
+        newsAgency.unSubscribe(rene);
+
+        newsAgency.setLatestNews("Gilas Pilipinas defeat New Zealand for the first time in eight years");
+        System.out.println("Just in!");
+        System.out.println(newsAgency.notifySubscribers());
 
         Subscriber adam = new Subscriber();
         adam.setSubscriberName("Adam");
         newsAgency.subscribe(adam);
 
-        newsAgency.setLatestNews("Manila declares class suspension!");
-        System.out.println("Latest Updates!");
+        newsAgency.setLatestNews("Manila declares class suspension");
+        System.out.println("Update!");
         System.out.println(newsAgency.notifySubscribers());
     }
 }
