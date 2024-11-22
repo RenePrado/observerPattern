@@ -1,10 +1,5 @@
 public class Subscriber implements SubscriberObserver {
-
     private String subscriberName;
-
-    public Subscriber(String subscriberName) {
-        this.subscriberName = subscriberName;
-    }
 
     public String getSubscriberName() {
         return subscriberName;
@@ -15,7 +10,7 @@ public class Subscriber implements SubscriberObserver {
     }
 
     @Override
-    public void updateNews(String news) {
-        System.out.println(subscriberName + " received news: " + news);
+    public void updateNews(NewsAgency newsAgency) {
+        System.out.println(subscriberName + " received the news: " + newsAgency.getLatestNews() + "\n");
     }
 }
