@@ -1,3 +1,3 @@
 public interface SubscriberObserver {
-    public void updateNews(String news);
+    void updateNews(NewsAgency newsAgency);
 }
