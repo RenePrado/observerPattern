@@ -36,9 +36,8 @@ public class NewsAgency implements NewsSubject {
     public String notifySubscribers() {
         String notifications = new String();
         for (Subscriber subscriber : subscriberList) {
-            notifications += subscriber.getSubscriberName() + " received news" + "!\n";
-            notifications += "Breaking News: " + (latestNews) + "\n\n";
+            subscriber.updateNews(this);
         }
-        return notifications;
+        return "All subscribers have been notified\n";
     }
 }
